@@ -4,17 +4,24 @@ body{
 }
  .navi{
      border-bottom:5px dotted orange;
+
 }
  .logos{
      text-align: center;
 }
  .banner{
      line-height: 170px;
+     margin-top: 50px;
      font-size: 20px;
      background-color: white;
      font-family: 'Indie Flower', cursive;
      border-bottom:5px solid orange;
 }
+.logoNav{
+
+     font-family: 'Indie Flower', cursive;
+     font-size: 25px;
+    }
  .logo{
      padding-left:50px;
      font-size: 60px;
@@ -23,6 +30,7 @@ body{
      border-left:4px solid palevioletred;
      border-right:4px solid palevioletred;
      background-size: cover;
+}
 }
  .links{
      background-color:#f0f0f0;
@@ -57,7 +65,7 @@ body{
 }
  .dirt{
      border-top:10px solid #351c15;
-     background-image: url("./dirt.jpg") 
+     background-image: url("./images/dirt.jpg") 
 }
  .building{
      background-color: #ffb900;
@@ -104,4 +112,13 @@ body{
      background-color:#0a8ea0;
      padding:50px 0 50px 0;
 }
- 
+.socialMedia{
+    margin-left:25px;
+    color:#0a8ea0;
+
+ }
+ .yelp{
+    color: #af0606;
+    padding-right:20px;
+
+ }

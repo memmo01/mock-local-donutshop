@@ -12,7 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet"  href="./widescreen.css">
     <link rel="stylesheet" media="screen and (max-width:999px)" href="./midscreen.css">
 </head>
@@ -20,14 +20,16 @@
 <body>
 
     <div class="container-fluid">
-        <nav class="navbar navbar-light bg-light navi">
-            <div class="col-lg-4">
-                add quotes here with timeinterval
+        <nav class="navbar navbar-light fixed-top bg-light navi">
+            <div class="col-lg-5 randomQuotes">
+
+               <i class="fab fa-yelp fa-2x yelp"></i> <span id="yelpQuotes"></span>
             </div>
-            <div class="col-lg-4 logos">
-                FB - INSTA - SNAP - TWITTER
+            <div class="col-lg-2 logos">
+                <i class="fab fa-twitter fa-2x socialMedia"></i><i class="fab fa-facebook-f fa-2x socialMedia"></i><i class="fab fa-instagram fa-2x socialMedia"></i> 
             </div>
-            <div class="col">
+            <div class="col logoNav">
+                The Donut Shop<img src="./images/donut.png" alt="donut-logo" style="height:30px">
             </div>
             <div class="col-lg-2">
                 Find locations
@@ -138,7 +140,7 @@
                     <div class="col-lg-6 about">
                         <h2><u>Donuts made fresh each day</u></h2>
                         <p>
-                            <img src="boxDonuts.png" alt="box of donuts" id="boxDonuts"> Fruitcake carrot cake biscuit cotton candy. Soufflé muffin gingerbread tart gingerbread cookie pudding sweet. Caramels fruitcake macaroon pie. Soufflé chocolate brownie marzipan. Wafer chocolate cake powder wafer. Lollipop jelly-o lollipop croissant marshmallow pie cheesecake gummi bears cotton candy. Marzipan cookie candy canes cookie. Cookie gingerbread macaroon jelly-o. Jelly fruitcake croissant carrot cake fruitcake liquorice sweet dessert muffin.
+                            <img src="./images/boxDonuts.png" alt="box of donuts" id="boxDonuts"> Fruitcake carrot cake biscuit cotton candy. Soufflé muffin gingerbread tart gingerbread cookie pudding sweet. Caramels fruitcake macaroon pie. Soufflé chocolate brownie marzipan. Wafer chocolate cake powder wafer. Lollipop jelly-o lollipop croissant marshmallow pie cheesecake gummi bears cotton candy. Marzipan cookie candy canes cookie. Cookie gingerbread macaroon jelly-o. Jelly fruitcake croissant carrot cake fruitcake liquorice sweet dessert muffin.
 
                         </p>
                     </div>
@@ -212,6 +214,37 @@
         <!-- END OF BUILDING AREA -->
 
     </div>
+
+    <script type="text/javascript">
+        
+
+        var customerQuotes=[{
+            quote:"The best donuts I've had since moving down south",
+            name:"foodieMAtt3"
+        },{
+            quote:"A fun and inviting store, we will be back!",
+            name:"FeedmeSeymore33"
+        },{
+            quote:"These guys know what they are doing! Must try!",
+            name:"jojo112"
+        },{
+            quote:"5 stars!! such a unique place with delicious taste!",
+            name:"bigEAter0"
+        }]
+
+        var x =document.getElementById("yelpQuotes")
+        x.innerHTML= ('"'+customerQuotes[0].quote+'"'+"-"+customerQuotes[0].name)
+        
+
+        setInterval(function(){
+            var quoteGenerator = Math.floor(Math.random()*customerQuotes.length)
+            var x =document.getElementById("yelpQuotes")
+            x.innerHTML= ('"'+customerQuotes[quoteGenerator].quote+'"'+"-"+customerQuotes[quoteGenerator].name)
+        
+        },5000)
+
+       
+    </script>
 
 </body>
 
